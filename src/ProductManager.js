@@ -89,38 +89,41 @@ class ProductManager {
 
 const productManager = new ProductManager();
 
-console.log(productManager.getProducts());
 
-console.log(
-  productManager.addProduct({
-    title: 'producto prueba',
-    description: 'Este es un producto prueba',
-    price: 200,
-    thumbnail: 'Sin imagen',
-    code: 'abc123',
-    stock: 25,
-  })
-);
+module.exports = ProductManager;
 
 console.log(productManager.getProducts());
 
-try {
-  console.log(productManager.getProductById(1));
-} catch (error) {
-  console.error(error.message);
-}
+// console.log(
+//   productManager.addProduct({
+//     title: 'producto prueba',
+//     description: 'Este es un producto prueba',
+//     price: 200,
+//     thumbnail: 'Sin imagen',
+//     code: 'abc123',
+//     stock: 25,
+//   })
+// );
 
-console.log(
-  productManager.updateProduct(1, {
-    price: 1200.99,
-    stock: 15,
-  })
-);
+// console.log(productManager.getProducts());
 
-console.log(productManager.getProducts());
+// try {
+//   console.log(productManager.getProductById(1));
+// } catch (error) {
+//   console.error(error.message);
+// }
 
-try {
-  console.log(productManager.deleteProduct(1));
-} catch (error) {
-  console.error(error.message);
-}
+// console.log(
+//   productManager.updateProduct(1, {
+//     price: 1200.99,
+//     stock: 15,
+//   })
+// );
+
+// console.log(productManager.getProducts());
+
+// try {
+//   console.log(productManager.deleteProduct(1));
+// } catch (error) {
+//   console.error(error.message);
+// }
