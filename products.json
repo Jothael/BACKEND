@@ -1,93 +1,92 @@
 [
-    {
-      "id": 1,
-      "title": "Zapatos Deportivos",
-      "description": "Zapatos para correr",
-      "price": 999.99,
-      "thumbnail": "Imagen de zapatos",
-      "code": "xyz456",
-      "stock": 10
-    },
-    {
-      "id": 2,
-      "title": "Camiseta Deportiva",
-      "description": "Camiseta cómoda para entrenar",
-      "price": 299.99,
-      "thumbnail": "Imagen de camiseta",
-      "code": "abc789",
-      "stock": 20
-    },
-    {
-      "id": 3,
-      "title": "Mochila de Viaje",
-      "description": "Mochila espaciosa para viajes",
-      "price": 1499.99,
-      "thumbnail": "Imagen de mochila",
-      "code": "ghi123",
-      "stock": 5
-    },
-    {
-      "id": 4,
-      "title": "Smartphone",
-      "description": "Teléfono inteligente con características avanzadas",
-      "price": 1999.99,
-      "thumbnail": "Imagen de smartphone",
-      "code": "def456",
-      "stock": 15
-    },
-    {
-      "id": 5,
-      "title": "Tablet",
-      "description": "Tableta con pantalla de alta resolución",
-      "price": 1499.99,
-      "thumbnail": "Imagen de tablet",
-      "code": "jkl789",
-      "stock": 8
-    },
-    {
-      "id": 6,
-      "title": "Auriculares Inalámbricos",
-      "description": "Auriculares con conectividad Bluetooth",
-      "price": 499.99,
-      "thumbnail": "Imagen de auriculares",
-      "code": "mno123",
-      "stock": 12
-    },
-    {
-      "id": 7,
-      "title": "Reloj Inteligente",
-      "description": "Reloj con funciones inteligentes",
-      "price": 799.99,
-      "thumbnail": "Imagen de reloj",
-      "code": "pqr456",
-      "stock": 7
-    },
-    {
-      "id": 8,
-      "title": "Cámara Digital",
-      "description": "Cámara para capturar momentos especiales",
-      "price": 1299.99,
-      "thumbnail": "Imagen de cámara",
-      "code": "stu789",
-      "stock": 10
-    },
-    {
-      "id": 9,
-      "title": "Impresora Multifuncional",
-      "description": "Impresora con escáner y copiadora",
-      "price": 599.99,
-      "thumbnail": "Imagen de impresora",
-      "code": "vwx123",
-      "stock": 6
-    },
-    {
-      "id": 10,
-      "title": "Teclado Gaming",
-      "description": "Teclado diseñado para juegos",
-      "price": 199.99,
-      "thumbnail": "Imagen de teclado",
-      "code": "yza456",
-      "stock": 9
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Zapatos Deportivos",
+    "description": "Zapatos para correr",
+    "price": 999.99,
+    "thumbnail": "Imagen de zapatos",
+    "code": "xyz456",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "Camiseta Deportiva",
+    "description": "Camiseta cómoda para entrenar",
+    "price": 299.99,
+    "thumbnail": "Imagen de camiseta",
+    "code": "abc789",
+    "stock": 20
+  },
+  {
+    "id": 3,
+    "title": "Mochila de Viaje",
+    "description": "Mochila espaciosa para viajes",
+    "price": 1499.99,
+    "thumbnail": "Imagen de mochila",
+    "code": "ghi123",
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "title": "Smartphone",
+    "description": "Teléfono inteligente con características avanzadas",
+    "price": 1999.99,
+    "thumbnail": "Imagen de smartphone",
+    "code": "def456",
+    "stock": 15
+  },
+  {
+    "id": 5,
+    "title": "Tablet",
+    "description": "Tableta con pantalla de alta resolución",
+    "price": 1499.99,
+    "thumbnail": "Imagen de tablet",
+    "code": "jkl789",
+    "stock": 8
+  },
+  {
+    "id": 6,
+    "title": "Auriculares Inalámbricos",
+    "description": "Auriculares con conectividad Bluetooth",
+    "price": 499.99,
+    "thumbnail": "Imagen de auriculares",
+    "code": "mno123",
+    "stock": 12
+  },
+  {
+    "id": 7,
+    "title": "Reloj Inteligente",
+    "description": "Reloj con funciones inteligentes",
+    "price": 799.99,
+    "thumbnail": "Imagen de reloj",
+    "code": "pqr456",
+    "stock": 7
+  },
+  {
+    "id": 8,
+    "title": "Cámara Digital",
+    "description": "Cámara para capturar momentos especiales",
+    "price": 1299.99,
+    "thumbnail": "Imagen de cámara",
+    "code": "stu789",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "title": "Impresora Multifuncional",
+    "description": "Impresora con escáner y copiadora",
+    "price": 599.99,
+    "thumbnail": "Imagen de impresora",
+    "code": "vwx123",
+    "stock": 6
+  },
+  {
+    "id": 10,
+    "title": "Teclado Gaming",
+    "description": "Teclado diseñado para juegos",
+    "price": 199.99,
+    "thumbnail": "Imagen de teclado",
+    "code": "yza456",
+    "stock": 9
+  }
+]
