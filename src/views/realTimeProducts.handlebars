@@ -1,16 +1,15 @@
 <div>
   <h1>Lista de Productos en Tiempo Real</h1>
-  <ul>
+  <ul id="mylist">
     {{#each products}}
-      <li>
-        {{title}} - {{description}} - {{price}} 
+      <li id="{{id}}-List"> 
+        {{id}} - {{description}} - {{price}} 
         <button onclick="deleteProduct('{{id}}')">Eliminar</button>
       </li>
     {{/each}}
   </ul>
 
   <form id="productForm">
-    <input type="hidden" id="action" name="action" value="create">
     <input type="text" name="title" placeholder="Título">
     <input type="text" name="description" placeholder="Descripción">
     <input type="number" name="price" placeholder="Precio">
@@ -29,19 +28,32 @@
         productData[key] = value
       })
 
-      const action = document.getElementById('action').value
 
-      socket.emit(action === 'create' ? 'newProduct' : 'deleteProduct', productData)
+      socket.emit( 'newProduct' , productData)
+
+       
 
       event.target.reset()
     })
 
     function deleteProduct(productId) {
-      socket.emit('deleteProduct', { id: productId })
+      socket.emit('deleteProduct', { id: Number(productId) })
     }
 
     socket.on('updateProducts', (updatedProducts) => {
       console.log('Productos actualizados:', updatedProducts)
+      const mylist= document.getElementById(`mylist`)
+      while(mylist.firstChild) {
+        mylist.removeChild(mylist.firstChild)
+      }
+
+      for(let productData of updatedProducts) {
+        const element=document.createElement('li')
+       element.id=`${productData.title}-List`
+       element.innerHTML=`${productData.id} - ${productData.description} - ${productData.price} \n<button onclick="deleteProduct('${productData.id}')">Eliminar</button>`
+       mylist.appendChild(element)
+      }
+       
     })
   </script>
 </div>

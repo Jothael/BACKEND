@@ -22,9 +22,9 @@ router.get('/:pid', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const { title, description, code, price, stock, category, thumbnails } = req.body
+  const { title, description, code, price, stock, category, thumbnail } = req.body
   try {
-    const result = productManager.addProduct({ title, description, code, price, stock, category, thumbnails })
+    const result = productManager.addProduct({ title, description, code, price, stock, category, thumbnail })
     res.json({ message: result })
   } catch (error) {
     res.status(400).json({ error: error.message })

@@ -4,7 +4,13 @@ const handlebars = require('express-handlebars')
 const { Server: ServerIO } = require('socket.io')
 const ProductManager = require('./managers/ProductManager')
 
-const productManager = new ProductManager('products.json')
+const httpServer = app.listen(8080, () => {
+  console.log(`Servidor corriendo en http://localhost:8080`)
+})
+
+const io = new ServerIO(httpServer)
+
+const productManager = new ProductManager('products.json',io)
 const productsRouter = require('./routes/products')
 const cartsRouter = require('./routes/carts')
 
@@ -30,20 +36,24 @@ app.get('/realtimeproducts', (req, res) => {
 app.use('/api/products', productsRouter)
 app.use('/api/carts', cartsRouter)
 
-const httpServer = app.listen(8080, () => {
-  console.log(`Servidor corriendo en http://localhost:8080`)
-})
 
-const io = new ServerIO(httpServer)
+
 io.on('connection', socket => {
   console.log('cliente conectado')
 
   socket.on('newProduct', (productData) => {
-    productManager.addProduct(productData)
+    console.log(productData)
+    const Product = {
+      ...productData,
+        code: productData.title, price: Number(productData.price), stock: 25 , category: 'generico ', thumbnail:'sin imagen'
+    }
+  
+    productManager.addProduct(Product)
     io.emit('updateProducts', productManager.getProducts())
   })
 
   socket.on('deleteProduct', (productData) => {
+    console.log(productData.id)
     productManager.deleteProduct(productData.id)
     io.emit('updateProducts', productManager.getProducts())
   })
